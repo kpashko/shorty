@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Old Link: {{ original_url }} <br/>
+New Link: {{ url_for('short.redirect_to_url', short_url=new_link, _external=True)}}
+</body>
+</html>

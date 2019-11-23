@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shorty</title>
+</head>
+<body>
+<form method="post" action="{{url_for('short.add_link') }}">
+    <input type="text" name="original_url">
+    <select name="lifetime">
+        <option value="1">День</option>
+        <option value="7">Тиждень</option>
+        <option value="31">Місяць</option>
+        <option value="90" selected>Три місяці</option>
+        <option value="180">Пів Року</option>
+        <option value="365">Рік</option>
+    </select>
+    <input type="submit">
+</form>
+</body>
+</html>
