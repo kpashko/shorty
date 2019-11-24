@@ -1,2 +1,2 @@
-web: gunicorn app:url_shortener
+web: gunicorn url_shortener:app
 
