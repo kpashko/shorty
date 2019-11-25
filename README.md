@@ -82,8 +82,11 @@ Whith one you can get your link shortened:
 ```
 /api/s/<your_original_link>
 ```
+it will respond with a shortened link
+
 and the second one returnes details about your shortened link
 ```
 /api/get_info/<your_short_code>
 ```
+it will return dict with original link, it's creation date and expiration date.
 
