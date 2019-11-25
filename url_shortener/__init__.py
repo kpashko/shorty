@@ -1,6 +1,9 @@
 from flask import Flask
 from .extensions import db
 from .routes import short
+from .models import Link
+
+from apscheduler.schedulers.background import BackgroundScheduler
 
 
 def create_app(config_file='settings.py'):
@@ -13,3 +16,8 @@ def create_app(config_file='settings.py'):
     app.register_blueprint(short)
 
     return app
+
+# link = Link()
+# scheduler = BackgroundScheduler(daemon=True)
+# scheduler.add_job(link.cleanup(), "interval", minutes=1)
+# scheduler.start()

@@ -25,3 +25,7 @@ class Link(db.Model):
             return self.generate_shortlink()
 
         return short_url
+
+    def cleanup(self):
+        self.query.filter_by(date_created=datetime.now()).delete()
+
