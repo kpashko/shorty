@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from url_shortener.extensions import db
+from .extensions import db
 import string
 from random import choices
 
@@ -27,5 +27,5 @@ class Link(db.Model):
         return short_url
 
     def cleanup(self):
-        self.query.filter_by(date_created=datetime.now()).delete()
+        return self.query.filter_by(date_created=datetime.now()).delete()
 

@@ -15,7 +15,15 @@ def create_app(config_file='settings.py'):
 
     app.register_blueprint(short)
 
+    scheduler.init_app(app)
+    scheduler.start()
+
     return app
+
+
+# import from other_module...
+# To avoid SQLAlchemy circular import, do the import at the bottom.
+from .db_cleanup import scheduler
 
 # link = Link()
 # scheduler = BackgroundScheduler(daemon=True)
