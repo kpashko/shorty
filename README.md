@@ -68,10 +68,10 @@ If you are running on local, it should be available at http://127.0.0.1:5000/ by
 
 ## Usage
 Here is your main page:
-![Start page](/img/shorty-startpage.png)
+![Start page](url_shortener/img/shorty-startpage.png)
 here you just insert your link, choose it's lifetime et voilà
 you receive your shortened url:
-![Link added](/img/shorty-link-added.png)
+![Link added](url_shortener/img/shorty-link-added.png)
 
 
 ## API
