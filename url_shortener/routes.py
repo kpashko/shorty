@@ -61,12 +61,3 @@ def api_shorten_url(original_url):
     db.session.commit()
 
     return link.short_url
-
-
-@short.route('/api/all')
-def stats():
-    links = Link.query.all()
-    return render_template('all.html', links=links)
-
-
-
